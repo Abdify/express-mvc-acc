@@ -13,6 +13,11 @@ const toolsRoutes = require("./routes/v1/tools.route.js");
 app.use(cors());
 app.use(express.json());
 
+// app.use(viewCount);
+
+
+// Apply the rate limiting middleware to all requests
+// app.use(limiter);
 
 dbConnect();
 
