@@ -5,16 +5,13 @@ const viewCount = require("../../middleware/veiwCount");
 
 const router = express.Router();
 
-
 // router.get("/", (req, res) => {
 //   res.send("tools found with id");
 // });
 
-
 // router.post("/", (req, res) => {
 //   res.send("tool added");
 // });
-
 
 router
   .route("/")
@@ -52,6 +49,10 @@ router
    */
   .post(toolsControllers.saveATool);
 
-router.route("/:id").get(viewCount, limiter, toolsControllers.getToolDetail);
+router
+  .route("/:id")
+  .get(viewCount, limiter, toolsControllers.getToolDetail)
+  .patch(toolsControllers.updateTool)
+  .delete(toolsControllers.deleteTool);
 
 module.exports = router;
