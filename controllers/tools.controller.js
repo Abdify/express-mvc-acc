@@ -7,6 +7,7 @@ let tools = [
 module.exports.getAllTools = (req, res, next) => {
   const { limit, page } = req.query;
   console.log(limit, page);
+  undefined.test();
   res.json(tools.slice(0, limit));
 };
 
@@ -21,7 +22,15 @@ module.exports.getToolDetail = (req, res) => {
   console.log(id);
   // const filter = {_id: id};
   const foundTool = tools.find(tool => tool.id === Number(id));
-  res.send(foundTool);
+  res.status(200).send({
+    success: true,
+    messages: "Success",
+    data: foundTool
+  });
+  // res.status(500).send({
+  //   success: false,
+  //   error: "Internal server error."
+  // });
 };
 
 module.exports.updateTool = (req, res) => {
