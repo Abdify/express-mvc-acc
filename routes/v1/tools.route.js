@@ -48,6 +48,9 @@ router
    * @apiError (Forbidden 403)     Forbidden     Only admins can access the data
    */
   .post(toolsControllers.saveATool);
+  
+
+router.route("/test").post(toolsControllers.test).get(toolsControllers.testGet);
 
 router
   .route("/:id")
