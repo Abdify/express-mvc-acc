@@ -5,14 +5,7 @@ const viewCount = require("../../middleware/veiwCount");
 
 const router = express.Router();
 
-// router.get("/", (req, res) => {
-//   res.send("tools found with id");
-// });
-
-// router.post("/", (req, res) => {
-//   res.send("tool added");
-// });
-
+// static routing
 router
   .route("/")
   /**
@@ -48,14 +41,13 @@ router
    * @apiError (Forbidden 403)     Forbidden     Only admins can access the data
    */
   .post(toolsControllers.saveATool);
-  
 
-router.route("/test").post(toolsControllers.test).get(toolsControllers.testGet);
-
+// dynamic routing
 router
   .route("/:id")
   .get(viewCount, limiter, toolsControllers.getToolDetail)
   .patch(toolsControllers.updateTool)
   .delete(toolsControllers.deleteTool);
 
+// module exports
 module.exports = router;
