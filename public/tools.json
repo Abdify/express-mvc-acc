@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Hand Hammer",
+    "description": "An oval-shaped hole is made in the body in which the handle is fitted by using a wedge.",
+    "unit": "kg",
+    "quantity": 0.91
+  },
+  {
+    "name": "Ball Peen Hammer",
+    "description": "On one end of this ball pane hammer, a plain face is made and on the other end, a pane of 3/4 like a round ball is made.",
+    "unit": "kg",
+    "quantity": 0.91
+  },
+  {
+    "name": "Sledge Hammer",
+    "description": "These are mostly used in blacksmithy for straightening round rods, iron bars, angle iron, channel, or flat iron.",
+    "unit": "kg",
+    "quantity": 10
+  },
+  {
+    "name": "Claw Hammer",
+    "description": "These are special types of hammers. On one end of this hammer, a round face is made and on the other end, its pane is inclined towards the handle.",
+    "unit": "kg",
+    "quantity": 5
+  },
+  {
+    "name": "Club Hammer",
+    "description": "If compared to as a drilling hammer or lump hammer, the tool has a small, double-faced head that is similar to a sledgehammer.",
+    "unit": "kg",
+    "quantity": 7
+  }
+]
